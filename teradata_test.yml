@@ -4,9 +4,15 @@
   tasks:
     - name: Build docker image
       command: docker build  -t test:latest .
+      
     - name: Run container from image
       command: docker run -it -d --name Ramatest test:latest 
+      
     - name: Docker export to a file
       command:  docker export --output="Ramatest.tar" Ramatest
+      
+    - name: signature version4 setup to accesss3 bucket
+      command: aws configure set s3.signature_version s3v4
+      
     - name: copy container artifacts to S3
       command: aws s3 cp Ramatest.tar  s3://ramatestdocker123/
