@@ -7,4 +7,4 @@
     - name: Run container from image
       command: docker run -it -d --name Ramatest test:latest 
     - name: Docker export to a file
-      command:  docker export --output="latest.tar" Ramatest
+      command:  docker export --output="Ramatest.tar" Ramatest
