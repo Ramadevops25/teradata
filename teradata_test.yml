@@ -5,5 +5,6 @@
     - name: Build docker image
       command: docker build  -t test .
     - name: Run container from image
-      command: docker run -it -d  test
-
+      command: docker run -it -d  test --name Ramatest
+    - name: Docker export to a file
+      command:  docker export --output="latest.tar" Ramatest
