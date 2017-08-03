@@ -3,6 +3,8 @@
   user: root
   tasks:
     - name: Build docker image
-      command: sudo docker build  -t test .
+      command: docker build  -t test .
+      user: root
     - name: Run container from image
-      command: sudo docker run -it -d  test
+      command: docker run -it -d  test
+      user: root
