@@ -1,6 +1,5 @@
 ---
 - hosts: localhost
-  become: yes
   sudo: yes
   user: ec2-user
   tasks:
