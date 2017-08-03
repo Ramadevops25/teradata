@@ -4,7 +4,6 @@
   tasks:
     - name: Build docker image
       command: docker build  -t test .
-      user: root
     - name: Run container from image
       command: docker run -it -d  test
-      user: root
+
