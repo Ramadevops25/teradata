@@ -1,0 +1,9 @@
+---
+- hosts: localhost
+  become: yes
+  user: vagrant
+  tasks:
+    - name: Build docker image
+      command: docker build  -t test .
+    - name: Run container from image
+      command: docker run -it -d  test
