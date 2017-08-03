@@ -9,4 +9,4 @@
     - name: Docker export to a file
       command:  docker export --output="Ramatest.tar" Ramatest
     - name: copy container artifacts to S3
-      Command: aws s3 cp Ramatest.tar  s3://ramatestdocker123/
+      command: aws s3 cp Ramatest.tar  s3://ramatestdocker123/
