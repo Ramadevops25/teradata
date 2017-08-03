@@ -1,5 +1,5 @@
 ---
-- hosts: hoststargets
+- hosts: localhost
   become: yes
   user: vagrant
   tasks:
